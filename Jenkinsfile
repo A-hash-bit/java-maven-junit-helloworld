@@ -14,6 +14,11 @@ pipeline{
              sh "mvn test"
             }
         }
+         stage("Integration Test"){
+            steps{
+             sh "mvn verify"
+            }
+        }
         stage("Sonar Analysis"){
       //     def scannerHome = tool 'SonarQubeScaner-4.7.0';
             steps{
